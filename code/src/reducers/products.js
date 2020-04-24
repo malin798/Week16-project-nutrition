@@ -7,9 +7,7 @@ export const products = createSlice({
   },
   reducers: {
     setProducts: (state, action) => {
-      const { todoInfo } = action.payload;
-      console.log(todoInfo);
-      //state.items.push({ products: action.payload });
+      state.items.push({ products: action.payload });
     },
   },
 });

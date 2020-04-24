@@ -17,7 +17,7 @@ export const Input = () => {
       fetch(`https://world.openfoodfacts.org/api/v0/product/${scanned}.json`)
         .then((data) => data.json())
         .then((json) => {
-          //dispatch(products.actions.setProducts(json));
+          dispatch(products.actions.setProducts(json));
           console.log(json);
           //dispatch(ui.actions.setLoading(false));
         });
