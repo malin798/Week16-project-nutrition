@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Provider, useDispatch } from 'react-redux';
 import { BarcodeScanner } from 'components/BarcodeScanner';
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { products } from 'reducers/products'
+import { products } from 'reducers/products';
+import { ScannedProduct } from 'components/Scannedproduct';
 import { Input } from './components/Input';
 
 // Fixa thunk
@@ -15,15 +16,13 @@ import { Input } from './components/Input';
 
 const reducer = combineReducers({ products: products.reducer });
 
-const store = configureStore({reducer});
+const store = configureStore({ reducer });
 
 export const App = () => {
-
-
   return (
     <Provider store={store}>
-      < Input />
-            
+      <Input />
+      <ScannedProduct />
     </Provider>
   );
 };
