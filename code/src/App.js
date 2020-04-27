@@ -5,6 +5,8 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { products } from 'reducers/products';
 import { ScannedProduct } from 'components/Scannedproduct';
 import { Input } from './components/Input';
+import { CameraButton } from 'components/CameraButton';
+import { startPage } from 'components/StartPage';
 
 // Fixa thunk
 // set up store
@@ -23,6 +25,7 @@ export const App = () => {
     <Provider store={store}>
       <Input />
       <ScannedProduct />
+      <CameraButton />
     </Provider>
   );
 };

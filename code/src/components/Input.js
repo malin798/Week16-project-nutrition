@@ -8,6 +8,7 @@ export const Input = () => {
   const [scanned, setScanned] = useState();
   const dispatch = useDispatch();
   console.log(scanned);
+
   const onDetected = (scanned) => {
     //return (dispatch) => {
     //dispatch(ui.actions.setLoading(true));
@@ -31,27 +32,18 @@ export const Input = () => {
         }}
       >
         <label>
-          {' '}
-          Test codes here:{' '}
           <input
             type='text'
             value={scanned}
+            placeholder='Enter your barcode'
             onChange={(event) => setScanned(event.target.value)}
           />
         </label>
 
-        <button type='submit'>Submit</button>
+        <button className='input-button' type='submit'>
+          Check
+        </button>
       </form>
-
-      <p>
-        {' '}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
-      </p>
-
-      <BarcodeScanner
-      // onDetected={() => onDetected()}
-      ></BarcodeScanner>
     </div>
   );
 };
