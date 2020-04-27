@@ -1,4 +1,6 @@
+html, 
 body {
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,8 +19,8 @@ code {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: #f4f7fc;
 }
 
@@ -59,17 +61,49 @@ input:focus {
   padding: 26px;
 }
 
-video {
+.barcode-scanner {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}
+
+.initializing-camera {
+  background-color: inherit;
+}
+
+video {
   width: 80%;
   height: 80%;
-  padding: 0 10%;
-  align-self: center;
 }
 
 canvas {
   width: 0px;
   height: 0px;
+}
+
+.scanned-product {
+  padding: 0 25px;
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.scanned-product img {
+  align-self: center;
+}
+
+.scanned-product p {
+  margin: 5px 0;
+}
+
+.scanned-product h2 {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .camera-button {
@@ -78,11 +112,19 @@ canvas {
   height: 70px;
   border: none;
   border-radius: 50%;
-  outline: none;
-  margin-bottom: 14px;
 }
 
 .fas {
   color: white;
   font-size: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0px;
+  background-color: inherit;
+  width: 100%;
+  padding: 5px 0;
 }

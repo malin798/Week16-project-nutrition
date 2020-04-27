@@ -5,32 +5,35 @@ import { StartPage } from './StartPage';
 
 export const ScannedProduct = () => {
   const list = useSelector((store) => store.products.items);
-  console.log(list.length);
-
+ 
   if (list.length === 0) {
     return <StartPage />;
   } else {
     return (
       <>
         {list.map((item) => {
+
           if (item.products.status_verbose === 'product not found') {
             return <p>product not found</p>;
-          } else {
+          } 
+          
+          else {
             return (
-              <div>
+              <div className="scanned-product">
                 <img
                   src={`${item.products.product.image_small_url}`}
                   alt='image of product'
                 ></img>
-                <p>{item.products.status_verbose}</p>
-                <p>{item.products.product.product_name}</p>
-                <p>{item.products.product.nutrition_grades_tags}</p>
-
+                {/* <p>{item.products.status_verbose}</p> */}
+                <h2>{item.products.product.brands}, {item.products.product.product_name}</h2>
+                {/* <p>{item.products.product.nutrition_grades_tags}</p> */}
+                <p><span className="bold">Category: </span>{item.products.product.pnns_groups_1}</p>
+                
                 <NovaGroup group={item.products.product.nova_groups} />
 
-                <p>{item.products.product.ingredients_analysis_tags}</p>
-                <p>{item.products.product.ingredients_text_with_allergens}</p>
-                <p>{item.products.product.ingredients_from_palm_oil_tags}</p>
+                <p><span className="bold">Labels: </span>{item.products.product.labels}</p>
+                <p><span className="bold">Ingredients: </span> {item.products.product.ingredients_text}</p>
+                <p><span className="bold">Ingredients from palm oil:</span>{item.products.product.ingredients_from_palm_oil_tags}</p>
               </div>
             );
           }

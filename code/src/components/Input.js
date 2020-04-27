@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import { BarcodeScanner } from 'components/BarcodeScanner';
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 import { products } from 'reducers/products';
 
 export const Input = () => {
