@@ -15,19 +15,34 @@ export const ScannedProduct = () => {
         {list.map((item) => {
           if (item.products.status_verbose === 'product not found') {
             return <NotFound />;
-          } else {
+          } 
+          else if (item.products.code === '') {
+            return <NotFound />;
+          } 
+          else {
+            
+            const productNameBrand = [];
+            if (item.products.product.brands && item.products.product.brands !== "") 
+              productNameBrand.push(item.products.product.brands);
+            
+            if (item.products.product.product_name && item.products.product.product_name !== "") 
+              productNameBrand.push(item.products.product.product_name);
+    
+            
+
             return (
               <div className='scanned-product'>
-                <img
+
+                {item.products.product.image_small_url && 
+                  <img
                   src={`${item.products.product.image_small_url}`}
                   alt='image of product'
-                ></img>
-                {/* <p>{item.products.status_verbose}</p> */}
-                <h2>
-                  {item.products.product.brands},{' '}
-                  {item.products.product.product_name}
-                </h2>
-                {/* <p>{item.products.product.nutrition_grades_tags}</p> */}
+                  ></img>}
+
+                <div className="product-brand">
+                <h2>{productNameBrand.join(", ")}</h2>
+                </div>
+
                 <p>
                   <span className='bold'>Category: </span>
                   {item.products.product.pnns_groups_1}

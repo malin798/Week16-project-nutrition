@@ -86,7 +86,7 @@ canvas {
 }
 
 .scanned-product {
-  padding: 0 25px;
+  width: 90%;
   background: inherit;
   display: flex;
   flex-direction: column;
@@ -94,8 +94,12 @@ canvas {
 
 .scanned-product img {
   align-self: center;
+  margin-bottom: 15px;
 }
 
+.product-brand {
+  display: flex;
+}
 .scanned-product p {
   margin: 5px 0;
 }

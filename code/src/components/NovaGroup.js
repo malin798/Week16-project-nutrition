@@ -7,7 +7,8 @@ export const NovaGroup = ({ group }) => {
     return <p><span className="bold">Nova group: </span> Processed culinary ingredients</p>;
   } else if (group === '3') {
     return <p><span className="bold">Nova group: </span> Processed foods</p>;
-  } else {
+  } else if (group === '4'){
     return <p><span className="bold">Nova group: </span> Ultra-processed food and drink products</p>;
   }
+  else return <></>
 };
