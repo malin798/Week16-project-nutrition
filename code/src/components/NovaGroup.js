@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 export const NovaGroup = ({ group }) => {
   if (group === '1') {
-    return <p>Unprocessed or minimally processed foods</p>;
+    return <p><span className="bold">Nova group: </span> Unprocessed or minimally processed foods</p>;
   } else if (group === '2') {
-    return <p>Processed culinary ingredients</p>;
+    return <p><span className="bold">Nova group: </span> Processed culinary ingredients</p>;
   } else if (group === '3') {
-    return <p>Processed foods</p>;
+    return <p><span className="bold">Nova group: </span> Processed foods</p>;
   } else {
-    return <p>Ultra-processed food and drink products</p>;
+    return <p><span className="bold">Nova group: </span> Ultra-processed food and drink products</p>;
   }
 };
