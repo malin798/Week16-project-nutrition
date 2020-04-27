@@ -1,10 +1,8 @@
-html, 
+html,
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,6 +53,11 @@ input:focus {
   padding: 2px 5px;
   border: none;
   border-radius: 5px;
+  outline: none;
+}
+
+.input-button:focus {
+  outline: darkgrey 1px solid;
 }
 
 .start-page {
@@ -112,11 +115,33 @@ canvas {
   height: 70px;
   border: none;
   border-radius: 50%;
+  outline: none;
+}
+
+.camera-button:focus {
+  outline: darkgrey 2px solid;
 }
 
 .fas {
   color: white;
   font-size: 2rem;
+}
+
+.not-found {
+  background-color: #a5988f;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+.heart {
+  color: lightyellow;
+  font-size: 3rem;
 }
 
 footer {
