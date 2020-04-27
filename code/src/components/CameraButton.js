@@ -27,10 +27,12 @@ export const CameraButton = () => {
 
   return (
     <>
-      {showCamera ? <BarcodeScanner onDetected={onDetected} /> : ''}
-      <button className='camera-button' onClick={handleBarCodeScanner}>
-        <i class='fas fa-camera'></i>
-      </button>
+      {showCamera ? <BarcodeScanner onDetected={onDetected} className="barcode-scanner" /> : ''}
+      <footer>
+        <button className='camera-button' onClick={handleBarCodeScanner}>
+          <i class='fas fa-camera'></i>
+        </button>
+      </footer>
     </>
   );
 };
