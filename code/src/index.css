@@ -86,6 +86,7 @@ canvas {
 }
 
 .scanned-product {
+  margin-top: 20px;
   width: 90%;
   background: inherit;
   display: flex;
@@ -132,12 +133,14 @@ canvas {
 }
 
 .not-found {
-  background-color: #a5988f;
+  background-color: #c2b6ae;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
   color: white;
   text-align: center;

@@ -31,6 +31,7 @@ export const Input = () => {
       >
         <label>
           <input
+            required
             type='text'
             value={scanned}
             placeholder='Enter your barcode'
