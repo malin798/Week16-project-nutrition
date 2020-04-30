@@ -7,8 +7,6 @@ import { NotFound } from './NotFound';
 export const ScannedProduct = () => {
   const list = useSelector((store) => store.products.items);
 
-
-
   if (list.length === 0) {
     return <StartPage />;
   }
@@ -31,6 +29,11 @@ export const ScannedProduct = () => {
                 .replace('en:', '')
                 .replace('-', ' ')
             ))
+
+            const palmOilIngredients = item.products.product.ingredients_that_may_be_from_palm_oil_tags.map((ingredient) => ( ingredient
+              .replace('-', ' ')
+              )
+            )
 
             const productNameBrand = [];
             if (item.products.product.brands && item.products.product.brands !== "")
@@ -57,7 +60,7 @@ export const ScannedProduct = () => {
                   {item.products.product.pnns_groups_1}
                 </p>
 
-                <NovaGroup group={item.products.product.nova_groups} />
+                <NovaGroup group={item.products.product.nova_group} />
 
                 <p>
                   <span className='bold'>Labels: </span>
@@ -72,8 +75,8 @@ export const ScannedProduct = () => {
                   {formattedIngredients.join(", ")}
                 </p>
                 <p>
-                  <span className='bold'>Ingredients from palm oil:</span>
-                  {item.products.product.ingredients_from_palm_oil_tags}
+                  <span className='bold'>Ingredients that may be from palm oil: </span>
+                  {palmOilIngredients.join(", ")}
                 </p>
               </div>
             );

@@ -22,7 +22,7 @@ export const Input = () => {
   };
 
   return (
-    <div>
+    <>
       <form
         onSubmit={(event) => {
           onDetected(scanned);
@@ -43,6 +43,6 @@ export const Input = () => {
           Check
         </button>
       </form>
-    </div>
+    </>
   );
 };

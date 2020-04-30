@@ -1,0 +1,21 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin display-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin color-theme($primary, $secondary) {
+  background-color: $primary;
+  color: $secondary;
+}
+
+%button-basic {
+  outline: none;
+  border: none;
+}
