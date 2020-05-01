@@ -8,17 +8,13 @@ export const Input = () => {
   console.log(scanned);
 
   const onDetected = (scanned) => {
-    //return (dispatch) => {
-    //dispatch(ui.actions.setLoading(true));
     fetch(`https://world.openfoodfacts.org/api/v0/product/${scanned}.json`)
       .then((data) => data.json())
       .then((json) => {
         dispatch(products.actions.setProducts(json));
         console.log(json);
-        //dispatch(ui.actions.setLoading(false));
       });
     setScanned('');
-    //}
   };
 
   return (

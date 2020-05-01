@@ -1,13 +1,11 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was the last in the React and Redux sprint. The assignment  was to create an app which used the webcam to scan products and to fetch information about the product from the open food facts API.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The biggest issue with the project was that the data was so inconsistent so we spent a lot of time on planning how to best retrieve and present the information. We solved it by deconstructing the data and make new variables and join them together in new constellations.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://malins-project-nutrition.netlify.app
